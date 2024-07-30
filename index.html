@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Formulario email</title>
+		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+		<style>
+			* {
+				padding: 0;
+				margin: 0;
+			}
+
+			body {
+				height: 100vh;
+			}
+			form {
+				background-color: goldenrod;
+				padding: 10px;	
+				display: flex;
+			    flex-direction: column;
+				color: white;
+				position: absolute;
+				transform: translateX(50%) translateY(-50%);
+				top: 50%;
+				right: 50%;
+			}
+			input, textarea {
+				margin: 10px;
+				padding: 5px;
+				border: black 0px solid;
+			}
+
+			input[type="submit"] {
+				background-color: #dbb553;
+				color: white;
+			}
+		</style>
+	</head>
+	<body>
+		<form id="contact-form">
+			<label>Nombre</label>
+			<input type="text" name="username" id="username" placeholder="Ingrese su nombre aquí">
+			<label>Email</label>
+			<input type="email" id="email" name="email" placeholder="Ingrese su email aquí">
+			<label>Contenido</label>
+			<textarea name="message"></textarea>
+			<input type="submit" id="submit" value="enviar">
+		</form>
+		<script src="app.js"></script>
+	</body>
+</html>
